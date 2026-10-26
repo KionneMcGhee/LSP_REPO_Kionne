@@ -1,0 +1,2 @@
+# CRC Collaboration Explanation
+The Book CRC card assigns each book responsibility for its own details, availability, and state changes, so Book does not need to know about Library. Library is responsible for maintaining the catalog, coordinating loans and returns, and enforcing the library-wide borrowing limit. Library therefore collaborates with Book to change individual book states. The three-book limit belongs to Library because only the library knows the number of books borrowed across its collection.
