@@ -1,0 +1,3 @@
+# Question 2 — Evolving Requirements
+
+The design uses RegistrationRepository and ConfirmationSender interfaces to separate business workflow from storage and message delivery. Add DatabaseRegistrationRepository as an implementation of RegistrationRepository, and TextConfirmationSender as an implementation of ConfirmationSender. Deployment configuration chooses concrete implementations and injects them into RegistrationService. RegistrationRepository owns saving because it isolates persistence-related concerns. RegistrationService owns coordinating workflow and only confirming after successful storage. These extensions preserve the existing collaborations while avoiding changes to the high-level registration workflow.
